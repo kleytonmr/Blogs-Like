@@ -53,13 +53,13 @@ linkedin_username: seu-usuario
 # Configurações do Giscus (comentários)
 giscus:
   repo: kleytonmr/Blogs-Like
-  repo_id: "" # será preenchido após ativar o Giscus
+  repo_id: "R_kgDOQtcoKQ"
   category: "Announcements"
-  category_id: "" # será preenchido após ativar o Giscus
+  category_id: "DIC_kwDOQtcoKc4C0LQb"
   mapping: "pathname"
   reactions_enabled: "1"
   emit_metadata: "0"
   input_position: "bottom"
-  theme: "light"
+  theme: "preferred_color_scheme"
   lang: "pt"
 
