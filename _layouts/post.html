@@ -47,23 +47,49 @@ layout: default
     {% endif %}
 </div>
 
-{% if site.giscus.repo_id != "" and site.giscus.category_id != "" %}
-<div class="giscus-comments">
-    <script src="https://giscus.app/client.js"
-            data-repo="{{ site.giscus.repo }}"
-            data-repo-id="{{ site.giscus.repo_id }}"
-            data-category="{{ site.giscus.category }}"
-            data-category-id="{{ site.giscus.category_id }}"
-            data-mapping="{{ site.giscus.mapping }}"
-            data-strict="0"
-            data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
-            data-emit-metadata="{{ site.giscus.emit_metadata }}"
-            data-input-position="{{ site.giscus.input_position }}"
-            data-theme="{{ site.giscus.theme }}"
-            data-lang="{{ site.giscus.lang }}"
-            crossorigin="anonymous"
-            async>
-    </script>
+<div class="comments-section">
+    {% if site.giscus.repo_id != "" and site.giscus.category_id != "" %}
+    <div class="comments-primary">
+        <h3 class="comments-title">Comentários</h3>
+        <p class="comments-subtitle">Comente usando sua conta do GitHub</p>
+        <div class="giscus-comments">
+            <script src="https://giscus.app/client.js"
+                    data-repo="{{ site.giscus.repo }}"
+                    data-repo-id="{{ site.giscus.repo_id }}"
+                    data-category="{{ site.giscus.category }}"
+                    data-category-id="{{ site.giscus.category_id }}"
+                    data-mapping="{{ site.giscus.mapping }}"
+                    data-strict="0"
+                    data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
+                    data-emit-metadata="{{ site.giscus.emit_metadata }}"
+                    data-input-position="{{ site.giscus.input_position }}"
+                    data-theme="{{ site.giscus.theme }}"
+                    data-lang="{{ site.giscus.lang }}"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if site.disqus.shortname != "" %}
+    <div class="comments-alternative">
+        <div class="comments-divider">
+            <span>ou</span>
+        </div>
+        <h3 class="comments-title">Comentários Alternativos</h3>
+        <p class="comments-subtitle">Não tem GitHub? Comente usando Google, Facebook ou conta Disqus</p>
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Por favor, habilite JavaScript para ver os comentários do Disqus.</noscript>
+    </div>
+    {% endif %}
 </div>
-{% endif %}
 

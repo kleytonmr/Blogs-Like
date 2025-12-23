@@ -649,22 +649,76 @@ body {
     }
 }
 
-/* Giscus Comments */
-.giscus-comments {
+/* Comments Section */
+.comments-section {
     margin-top: 80px;
     padding-top: 48px;
     border-top: 1px solid var(--border-color);
 }
 
-.giscus-comments::before {
-    content: "Comentários";
-    display: block;
+.comments-primary {
+    margin-bottom: 0;
+}
+
+.comments-title {
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
     color: var(--text-light);
+}
+
+.comments-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    font-style: italic;
+}
+
+/* Giscus Comments */
+.giscus-comments {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.giscus-comments::before {
+    display: none;
+}
+
+/* Comments Divider */
+.comments-divider {
+    margin: 64px 0;
+    text-align: center;
+    position: relative;
+}
+
+.comments-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.comments-divider span {
+    background-color: var(--bg-primary);
+    padding: 0 24px;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    position: relative;
+}
+
+/* Disqus Comments */
+.comments-alternative {
+    margin-top: 0;
+}
+
+#disqus_thread {
+    margin-top: 32px;
 }
 
 /* Force rebuild */

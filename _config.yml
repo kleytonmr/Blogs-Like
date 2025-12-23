@@ -63,3 +63,7 @@ giscus:
   theme: "light"
   lang: "pt"
 
+# Configurações do Disqus (comentários alternativos)
+disqus:
+  shortname: "blogs-like"
+
