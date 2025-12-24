@@ -6,4 +6,4 @@ Repositório do meu blog pessoal.
 
 ---
 
-Construído com Jekyll e publicado no GitHub Pages.
+Construído com Jekyll e publicado no GitHub Pages. Comentários integrados com Giscus (GitHub) e Disqus.
