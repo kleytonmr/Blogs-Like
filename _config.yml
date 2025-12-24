@@ -68,3 +68,8 @@ giscus:
 disqus:
   shortname: "blogs-like"
 
+# Configurações do Google Analytics
+google_analytics:
+  id: "G-VL6RXLDMV9"
+  enabled: true
+
