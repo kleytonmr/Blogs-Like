@@ -73,27 +73,52 @@ layout: default
     {% endif %}
 
     {% if site.disqus.shortname != "" %}
-    <div class="comments-alternative">
-        <div class="comments-divider">
-            <span>ou</span>
+    <div class="comments-alternative-wrapper">
+        <button class="toggle-disqus-btn" onclick="toggleDisqus()" aria-expanded="false">
+            <span class="toggle-text">Não tem GitHub? Comente de outra forma</span>
+            <span class="toggle-icon">▼</span>
+        </button>
+        <div class="comments-alternative" id="disqus-container" style="display: none;">
+            <h3 class="comments-title">Comentários Alternativos</h3>
+            <p class="comments-subtitle">Comente usando Google, Facebook ou conta Disqus</p>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = '{{ site.url }}{{ site.baseurl }}{{ page.url }}';
+                    this.page.identifier = '{{ page.url }}';
+                    this.page.title = '{{ page.title }}';
+                };
+                var disqusLoaded = false;
+                function loadDisqus() {
+                    if (!disqusLoaded) {
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                        disqusLoaded = true;
+                    }
+                }
+                function toggleDisqus() {
+                    var container = document.getElementById('disqus-container');
+                    var button = document.querySelector('.toggle-disqus-btn');
+                    var icon = button.querySelector('.toggle-icon');
+                    
+                    if (container.style.display === 'none') {
+                        container.style.display = 'block';
+                        button.setAttribute('aria-expanded', 'true');
+                        icon.textContent = '▲';
+                        loadDisqus();
+                    } else {
+                        container.style.display = 'none';
+                        button.setAttribute('aria-expanded', 'false');
+                        icon.textContent = '▼';
+                    }
+                }
+            </script>
+            <noscript>Por favor, habilite JavaScript para ver os comentários do Disqus.</noscript>
         </div>
-        <h3 class="comments-title">Comentários Alternativos</h3>
-        <p class="comments-subtitle">Não tem GitHub? Comente usando Google, Facebook ou conta Disqus</p>
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = '{{ site.url }}{{ site.baseurl }}{{ page.url }}';
-                this.page.identifier = '{{ page.url }}';
-                this.page.title = '{{ page.title }}';
-            };
-            (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Por favor, habilite JavaScript para ver os comentários do Disqus.</noscript>
     </div>
     {% endif %}
 </div>

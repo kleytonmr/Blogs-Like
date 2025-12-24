@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script para criar um novo post no blog
+# Script para criar um novo post no Pensamentos & Código
 # Uso: ./scripts/criar-post.sh "Título do Post" categoria1 categoria2
 
 if [ $# -lt 2 ]; then

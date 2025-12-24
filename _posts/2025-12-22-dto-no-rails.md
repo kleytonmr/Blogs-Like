@@ -7,17 +7,29 @@ tags: [rails, arquitetura, dto, design-patterns]
 excerpt: "Uma visão prática sobre DTO no Rails, comparando com Entities, Repositories e Serializers, e quando realmente faz sentido usar."
 ---
 
+
 ## DTO no Rails: o que é, quando usar e como ele se diferencia de Entities, Repositories e Serializers
 
-Conforme uma aplicação Rails cresce, algumas perguntas começam a aparecer com mais frequência:
+Ontem à noite (23/12/2025), acabei caindo em um vídeo de um dos meus canais favoritos no YouTube, do Augusto Galego, com um título bem direto: [*“Por que usar DTOs?”*  ](https://www.youtube.com/watch?v=jpeUKuCexGc)
+
+Confesso que o título me travou por alguns segundos.  
+
+DTO não era um termo totalmente estranho, mas eu nunca tinha parado para pensar conscientemente nele como um conceito isolado dentro das aplicações Rails que já trabalhei.
+
+Assisti ao vídeo, fiz uma leitura rápida sobre o assunto e, como de costume, fui complementar com pesquisas e conversas técnicas. A primeira reação foi quase automática: *“isso aqui não é só um serializer?”*. Mas não — não exatamente.
+
+O que mais me chamou atenção é que, olhando para trás, percebi que muitas das aplicações Rails em que trabalhei já enfrentavam esse tipo de problema, mesmo sem chamar isso explicitamente de DTO. Conforme a aplicação cresce, deixa de ser apenas CRUD e começa a lidar com mais regra, mais integração e mais responsabilidade, algumas perguntas começam a surgir naturalmente.
+
+Enquanto assistia ao vídeo, me peguei anotando dúvidas que, na prática, já tinham aparecido em outros projetos:
 
 - O que exatamente é um DTO?
 - Ele substitui o Model?
 - Qual a diferença entre DTO, Entity, Repository e Serializer?
 - Rails tem algum padrão oficial para isso?
 
-Essas dúvidas geralmente surgem quando o projeto deixa de ser apenas CRUD e começa a ter mais regra, mais integração e mais responsabilidade.  
-A ideia deste post é organizar esses conceitos de forma prática, com exemplos reais em Rails, e ajudar a decidir quando cada abordagem faz sentido — e quando não faz.
+Essas perguntas não aparecem no início de um projeto. Elas surgem quando a aplicação começa a ficar maior, quando respostas deixam de vir de um único model e quando o código começa a pedir mais organização.
+
+A ideia deste post é justamente organizar esses conceitos de forma prática, com exemplos reais em Rails, e ajudar a entender quando cada abordagem faz sentido — e quando ela só adiciona mais uma camada sem necessidade.
 
 ---
 

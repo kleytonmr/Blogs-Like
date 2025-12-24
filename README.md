@@ -1,6 +1,6 @@
-# Meu Blog com Jekyll e GitHub Pages
+# Pensamentos & Código com Jekyll e GitHub Pages
 
-Um blog simples e elegante usando Jekyll, que permite escrever posts em Markdown e publicá-los automaticamente no GitHub Pages.
+Pensamentos & Código - um espaço simples e elegante usando Jekyll, que permite escrever posts em Markdown e publicá-los automaticamente no GitHub Pages.
 
 ## 🚀 Características
 
@@ -59,7 +59,7 @@ excerpt: "Breve descrição do post que aparece na listagem"
 
 ### Visualizar Localmente
 
-Para ver seu blog localmente antes de publicar:
+Para ver Pensamentos & Código localmente antes de publicar:
 
 ```bash
 bundle exec jekyll serve
@@ -151,11 +151,11 @@ git push -u origin main
 
 ## 🎨 Personalização
 
-### Alterar Informações do Blog
+### Alterar Informações do Pensamentos & Código
 
 Edite o arquivo `_config.yml`:
-- `title`: Título do blog
-- `description`: Descrição do blog
+- `title`: Título do Pensamentos & Código
+- `description`: Descrição do Pensamentos & Código
 - `author`: Seu nome
 - `url`: URL do seu site no GitHub Pages
 

@@ -73,6 +73,13 @@ body {
     opacity: 0.7;
 }
 
+.site-title-highlight {
+    font-weight: 700;
+    color: #000000;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.01em;
+}
+
 .site-nav {
     display: flex;
     gap: 32px;
@@ -712,13 +719,81 @@ body {
     position: relative;
 }
 
-/* Disqus Comments */
+/* Disqus Comments - Botão Expansível */
+.comments-alternative-wrapper {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+}
+
+.toggle-disqus-btn {
+    width: 100%;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.toggle-disqus-btn:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.toggle-disqus-btn:focus {
+    outline: 1px solid var(--text-primary);
+    outline-offset: 2px;
+}
+
+.toggle-text {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.toggle-icon {
+    color: var(--text-light);
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.toggle-disqus-btn:hover .toggle-text {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.toggle-disqus-btn:hover .toggle-icon {
+    color: var(--text-primary);
+}
+
 .comments-alternative {
-    margin-top: 0;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #disqus_thread {
-    margin-top: 32px;
+    margin-top: 24px;
 }
 
 /* Customizar cores do Disqus para combinar com o blog */
@@ -736,14 +811,6 @@ body {
 /* Personalização adicional do Disqus via CSS */
 .comments-alternative .disqus-comment {
     background-color: var(--bg-primary) !important;
-}
-
-/* Forçar tema claro no Disqus através de variáveis CSS */
-:root {
-    --disqus-bg: #ffffff;
-    --disqus-text: #242424;
-    --disqus-link: #242424;
-    --disqus-border: #e0e0e0;
 }
 
 /* Force rebuild */

@@ -1,7 +1,7 @@
 # Configuração do Blog Jekyll
 
-title: Meu Blog
-description: Um blog sobre diversos tópicos de interesse
+title: Pensamentos & Código
+description: Pensamentos & Código sobre diversos tópicos de interesse
 author: Kleyton Ramos
 email: seu-email@exemplo.com
 url: https://kleytonmr.github.io
@@ -35,6 +35,7 @@ exclude:
   - README.md
   - .git
   - .gitignore
+  - _post-template.md
 
 # Configurações de categorias (tópicos)
 defaults:
