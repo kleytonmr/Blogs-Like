@@ -47,7 +47,7 @@ Tudo escrito no meu tempo, do meu jeito e com o máximo de honestidade possível
 ## Contato
 
 Se quiser trocar uma ideia ou continuar a conversa:
-- GitHub: [@kleytonramos](https://github.com/kleytonramos)
+- GitHub: [@kleytonmr](https://github.com/kleytonmr)
 - Email: kleytonmatosramos@gmail.com
 - Instagram: [@kleytonmr](https://www.instagram.com/kleytonmr/)
 - Instagram: [@kleytonmrdev](https://www.instagram.com/kleytonmrdev/)
