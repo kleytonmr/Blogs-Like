@@ -4,10 +4,7 @@ module Jekyll
   class CategoryPageGenerator < Generator
     safe true
 
-    def generate(site)
-      
-      binding.pry
-      
+    def generate(site)  
       if site.layouts.key? 'category'
         site.categories.keys.each do |category|
           site.pages << CategoryPage.new(site, site.source, category)
